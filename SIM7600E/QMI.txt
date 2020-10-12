@@ -1,0 +1,118 @@
+https://github.com/jordy33/sim7600
+-------------------------------------------------------------------------------
+
+
+
+$ sudo apt install libqmi-utils
+$ sudo apt install udhcpc
+
+# *****************************************************************************
+
+# https://forum-raspberrypi.de/forum/thread/44357-waveshare-raspberry-pi-4g-3g-2g-gsm-gprs-gnss-hat-based-on-sim7600e-h-supports-l/
+
+def bring_sim7600_up():
+    getstatus = os.popen('sudo qmicli -d /dev/cdc-wdm0 --dms-get-operating-mode').read().split("\n\t")[1].split("'")[1]
+    if getstatus == 'online':
+        print("QMI Interface: Gerät ist online")
+    else:
+        print("QMI Interface: Offline! ...starte Modem")
+        startupcommand = 'sudo qmicli -d /dev/cdc-wdm0 --dms-set-operating-mode="online"'
+        os.system(startupcommand)
+        time.sleep(2)
+        getstatus2 = os.popen('sudo qmicli -d /dev/cdc-wdm0 --dms-get-operating-mode').read().split("\n\t")[1].split("'")[1]
+        if getstatus2 == 'online':
+            print("QMI Interface: Gerät ist nun online")
+        else:
+            print("QMI Interface: Gerätefehler - konnte nicht aktiviert werden")
+
+
+def set_raw_ip_mode():
+    com0 = 'sudo ip link set wwan0 down'
+    com1 = 'echo Y | sudo tee /sys/class/net/wwan0/qmi/raw_ip'
+    com2 = 'sudo ip link set wwan0 up'
+    os.system(com0)
+    os.system(com1)
+    os.system(com2)
+
+def connect_qmi():
+    com_connect = 'sudo qmicli -p -d /dev/cdc-wdm0 --device-open-net="net-raw-ip|net-no-qos-header" --wds-start-network="apn=pinternet.interkom.de,ip-type=4" --client-no-release-cid'
+    com_dhcp = 'sudo udhcpc -i wwan0'
+    os.system(com_connect)
+    os.system(com_dhcp)
+
+
+
+
+if __name__ == "__main__":
+    bring_sim7600_up()
+    set_raw_ip_mode()
+    connect_qmi()
+
+
+# *****************************************************************************
+
+#Initialising cellular connection (wwan0) IP Type
+sudo qmicli -d /dev/cdc-wdm0 --dms-set-operating-mode='online'
+sudo ip link set wwan0 down
+echo 'Y' | sudo tee /sys/class/net/wwan0/qmi/raw_ip
+sudo ip link set wwan0 up
+
+#Configuring cellular connection (APN, Usr, Pwd)
+sudo qmicli -p -d /dev/cdc-wdm0 --device-open-net='net-raw-ip|net-no-qos-header' --wds-start-network="apn='three.co.uk',ip-type=4" --client-no-release-cid
+
+#Connect to the mobile Network
+sudo qmi-network /dev/cdc-wdm0 start
+
+#Configure IP Address & default route
+sudo udhcpc -i wwan0
+
+#Run Airquality Monitoring Python Script
+python3 /home/pi/sds011.py &
+
+
+
+# *****************************************************************************
+# https://www.o2apn.de/
+
+
+Die richtigen Zugangsdaten für APN Einstellungen:
+
+
+Profilname
+    o2 Internet
+
+APN (Zugangspunkt)
+    “internet” (für postpaid) order “pinternet.interkom.de” (für prepaid)
+
+Proxy
+	nicht notwendig
+
+Port
+	nicht notwendig
+
+Benutzername
+	nicht notwendig
+
+Passwort
+	nicht notwendig
+
+Server
+	nicht notwendig
+
+MCC
+	262
+
+MNC
+	07
+
+Authentifizierungstyp
+	PAP
+
+APN type
+	default,supl (Achtung: in Kleinbuchstaben)
+
+Verbindungssicherheit
+	aus
+
+Startseite (Homepage)
+	http://m.o2online.de

@@ -1,0 +1,642 @@
+<html class="client-js" dir="ltr" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script async="" src="SIM7600CE-T_E-H_A-H_G-H%204G%20Modules%20-%20Waveshare%20Wiki_files/load_003.php"></script><style type="text/css">
+        #ca-watch , #ca-history,#ca-talk ,#ca-viewsource ,#p-tb{ display: none !important; }
+      </style> 
+          <style type="text/css">
+        #ca-watch , #ca-history,#ca-talk ,#t-print ,#t-permalink ,#t-info ,#t-recentchangeslinked ,#t-whatlinkshere{ display: none !important; }
+      </style>
+
+
+<meta charset="UTF-8">
+<title>SIM7600CE-T/E-H/A-H/G-H 4G Modules - Waveshare Wiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<meta name="generator" content="MediaWiki 1.23.5">
+<link rel="shortcut icon" href="https://www.waveshare.com/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.waveshare.com/w/opensearch_desc.php" title="Waveshare Wiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://www.waveshare.com/w/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Waveshare Wiki Atom feed" href="https://www.waveshare.com/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="stylesheet" href="SIM7600CE-T_E-H_A-H_G-H%204G%20Modules%20-%20Waveshare%20Wiki_files/load.css">
+<style>
+.fancybox-wrap,.fancybox-skin,.fancybox-outer,.fancybox-inner,.fancybox-image,.fancybox-wrap iframe,.fancybox-wrap object,.fancybox-nav,.fancybox-nav span,.fancybox-tmp{padding:0;margin:0;border:0;outline:none;vertical-align:top}.fancybox-wrap{position:absolute;top:0;left:0;z-index:8020}.fancybox-skin{position:relative;background:#f9f9f9;color:#444;text-shadow:none;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}.fancybox-opened{z-index:8030}.fancybox-opened .fancybox-skin{-webkit-box-shadow:0 10px 25px rgba(0,0,0,0.5);-moz-box-shadow:0 10px 25px rgba(0,0,0,0.5);box-shadow:0 10px 25px rgba(0,0,0,0.5)}.fancybox-outer,.fancybox-inner{position:relative}.fancybox-inner{overflow:hidden}.fancybox-type-iframe .fancybox-inner{-webkit-overflow-scrolling:touch}.fancybox-error{color:#444;font:14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;margin:0;padding:15px;white-space:nowrap}.fancybox-image,.fancybox-iframe{display:block;width:100%;height:100%}.fancybox-image{max-width:100%;max-height:100%}#fancybox-loading,.fancybox-close,.fancybox-prev span,.fancybox-next span{background-image:url(https://www.waveshare.com/w/extensions/FancyBoxThumbs/modules/fancyBox/source/fancybox_sprite.png?2016-12-17T05:51:40Z)}#fancybox-loading{position:fixed;top:50%;left:50%;margin-top:-22px;margin-left:-22px;background-position:0 -108px;opacity:0.8;cursor:pointer;z-index:8060}#fancybox-loading div{width:44px;height:44px;background:url(https://www.waveshare.com/w/extensions/FancyBoxThumbs/modules/fancyBox/source/fancybox_loading.gif?2016-12-17T05:51:40Z) center center no-repeat}.fancybox-close{position:absolute;top:-18px;right:-18px;width:36px;height:36px;cursor:pointer;z-index:8040}.fancybox-nav{position:absolute;top:0;width:40%;height:100%;cursor:pointer;text-decoration:none;background:transparent url(https://www.waveshare.com/w/extensions/FancyBoxThumbs/modules/fancyBox/source/blank.gif?2016-12-17T05:51:40Z); -webkit-tap-highlight-color:rgba(0,0,0,0);z-index:8040}.fancybox-prev{left:0}.fancybox-next{right:0}.fancybox-nav span{position:absolute;top:50%;width:36px;height:34px;margin-top:-18px;cursor:pointer;z-index:8040;visibility:hidden}.fancybox-prev span{left:10px;background-position:0 -36px}.fancybox-next span{right:10px;background-position:0 -72px}.fancybox-nav:hover span{visibility:visible}.fancybox-tmp{position:absolute;top:-99999px;left:-99999px;visibility:hidden;max-width:99999px;max-height:99999px;overflow:visible !important} .fancybox-lock{overflow:hidden}.fancybox-overlay{position:absolute;top:0;left:0;overflow:hidden;display:none;z-index:8010;background:url(https://www.waveshare.com/w/extensions/FancyBoxThumbs/modules/fancyBox/source/fancybox_overlay.png?2016-12-17T05:51:40Z)}.fancybox-overlay-fixed{position:fixed;bottom:0;right:0}.fancybox-lock .fancybox-overlay{overflow:auto;overflow-y:scroll} .fancybox-title{visibility:hidden;font:normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;position:relative;text-shadow:none;z-index:8050}.fancybox-opened .fancybox-title{visibility:visible}.fancybox-title-float-wrap{position:absolute;bottom:0;right:50%;margin-bottom:-35px;z-index:8050;text-align:center}.fancybox-title-float-wrap .child{display:inline-block;margin-right:-100%;padding:2px 20px;background:transparent; background:rgba(0,0,0,0.8);-webkit-border-radius:15px;-moz-border-radius:15px;border-radius:15px;text-shadow:0 1px 2px #222;color:#FFF;font-weight:bold;line-height:24px;white-space:nowrap}.fancybox-title-outside-wrap{position:relative;margin-top:10px;color:#fff}.fancybox-title-inside-wrap{padding-top:10px}.fancybox-title-over-wrap{position:absolute;bottom:0;left:0;color:#fff;padding:10px;background:#000;background:rgba(0,0,0,.8)}
+/* cache key: waveshareDB:resourceloader:filter:minify-css:7:8f9cf61ef0b8a3ae7e2cd8b96934e88c */
+.tabberlive .tabbertabhide{display:none}.tabberlive{margin-top:5px;min-width:260px}.tabberlive .tabbertab{padding:5px} .tabberlive#tab2 .tabbertab{height:200px;overflow:auto}ul.tabbernav{ display:block;margin-bottom:0;padding:3px 0 0 1px;border-bottom:solid 1px #ddd;height:40px;list-style:none;margin:0 0 30px 0;line-height:1.4;color:#333;font:normal 16px 'Calibri',serif}ul.tabbernav li{ float:left;height:40px}ul.tabbernav li a{ display:block;margin:0 0 0 -1px;height:35px;padding:0px 20px;line-height:40px;border:solid 1px #ddd;border-width:1px 1px 0 1px;color:#333;background:#f5f5f5;font-size:16px;text-decoration:none}ul.tabbernav li a:link{color:#333}ul.tabbernav li a:visited{color:#667}ul.tabbernav li a:hover{color:#006400;background:#FFF; }ul.tabbernav li.tabberactive a{ position:relative;height:40px;top:-4px;padding-top:4px;background:#666666;border-bottom:1px solid #fff;color:#fff;-moz-border-radius-topleft:4px;-webkit-border-top-left-radius:4px;border-top-left-radius:4px;-moz-border-radius-topright:4px;-webkit-border-top-right-radius:4px;border-top-right-radius:4px}ul.tabbernav li.tabberactive a:hover{color:#000;background:white;border-bottom:1px solid white}
+/* cache key: waveshareDB:resourceloader:filter:minify-css:7:2a8c36ca09556b9c4288e78b46de49f8 */
+.mw-collapsible-toggle{float:right;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none} caption .mw-collapsible-toggle{float:none} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+/* cache key: waveshareDB:resourceloader:filter:minify-css:7:6c1d24e90626cec584f0869483f983e7 */
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px -1px 0 0} html > body .suggestions{margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.highlight{font-weight:bold}
+/* cache key: waveshareDB:resourceloader:filter:minify-css:7:9f9511aa4ef920d34591113e825e6a1e */
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba(255,255,255,0.5);border-radius:5px;-webkit-box-shadow:0 2px 5px 0 #ccc;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABblBMVEUAAAD///////9PfTf///80aRdTgjn///9Feij///////////9Rfzf///////////9PfjZRgDh1o1xOfTb///////+bwYqLtnj///////9PfTa82K////9WhT6YxIL///9QgDdTgzr////////j7uDl7eLq8efi693k7OH///////9UhjuBr2rp9uRUhjr///9YljVKgir///9WiTlYjT3////9/v57vFlbkT5PjC9dlD/5/fhuq09stUTs9uhxuElctCpfnT1huDFloEZloUZmpENmvDZpvDxpvTxqvjxrvT5rvT9rwTxsqktswD5uwkBvuUdxw0NztFBztU9ztVBzwkp0tlJ1xkd2t1R3uVR4w1F4xk54x014yE15uVZ5v1R5xVB6v1R7yFJ8wVh9xVl9yFR9yVd9ylN+xVh+yFd/x1l/yFeAylmEx1+Ny2uY0Hqe04Wj1Ymv3Ze33qLD47TJ5L3O6cPU7Mrq9eb2+/Q4j37OAAAAQHRSTlMAAQIEBAUFBQwPFB4fJCUoKiosQEhJS01RUlZZXmdydXaChYuSlJSWmJmoq6uur8LExcvM19fg5ejt8fX2+Pr7SljgewAAAKpJREFUGBkFwQNCAwAAAMDLtl3LtrG4rWXbtvX77gAgZ6grFwC0bhwNVgKgdPZx8b0dgLi+s7Wn0VoAqpfOI9+BNADZI7fLrz2pSEwGHZuH+78lSK8ZLkLezF3ooyUG3VPXq2USei9WngeyoG195yBYWDF3E/2pAhl1e9Gr8bGT+bfOFCC2fnvh4X7rcqIAQNNu+HT6sxkAjceTL/2ZAIhv+PorBwBJxfkA//dFHSCBy/UTAAAAAElFTkSuQmCC);background-image:url(https://www.waveshare.com/w/resources/src/mediawiki.action/images/green-checkmark.png?2016-12-17T05:51:40Z)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:black;text-shadow:0 0.0625em 0 white;text-decoration:none;opacity:0.2;filter:alpha(opacity=20)}.postedit-close:hover{color:black;text-decoration:none;opacity:0.4;filter:alpha(opacity=40)}
+/* cache key: waveshareDB:resourceloader:filter:minify-css:7:024e2eecc3c52eef0addef925fc8f742 */</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:black;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:white}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}
+/* cache key: waveshareDB:resourceloader:filter:minify-css:7:ae3fa4570b5ac0c6cf7b3776c8ae4d6f */</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="SIM7600CE-T_E-H_A-H_G-H%204G%20Modules%20-%20Waveshare%20Wiki_files/load_002.css">
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: waveshareDB:resourceloader:filter:minify-css:7:ec17bd822a5c5068c0f79ac8f2cc2a79 */</style>
+<script src="SIM7600CE-T_E-H_A-H_G-H%204G%20Modules%20-%20Waveshare%20Wiki_files/load_004.php"></script><script src="SIM7600CE-T_E-H_A-H_G-H%204G%20Modules%20-%20Waveshare%20Wiki_files/load_005.php"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"SIM7600E-H_4G_HAT","wgTitle":"SIM7600E-H 4G HAT","wgCurRevisionId":20246,"wgRevisionId":20246,"wgArticleId":4686,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["RPi interface","UART interface","Modules","4G","GPS/GSM"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"SIM7600E-H_4G_HAT","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"preview":false,"previewDialog":false,"publish":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":1,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rows":25,"showhiddencats":0,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":1,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,
+"useeditwarning":1,"prefershttps":1,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"gadget-edit0":1,"gadget-timer":1,"gadget-collapsible":1,"gadget-msp":1,"gadget-tabber":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: waveshareDB:resourceloader:filter:minify-js:7:267240b08c35deab46f5b445f79be47d */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","skins.vector.js"]);
+}</script><script src="SIM7600CE-T_E-H_A-H_G-H%204G%20Modules%20-%20Waveshare%20Wiki_files/load_002.php"></script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-SIM7600E-H_4G_HAT skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">SIM7600CE-T/E-H/A-H/G-H 4G Modules</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Waveshare Wiki</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><table class="a-r at-c roundy bgd-blue bl-white" style="margin-left: 5px; margin-bottom: 5px; width: 30%;">
+
+<tbody><tr>
+<td>
+<table class="at-c roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"> <b><strong class="selflink">SIM7600E-H 4G HAT</strong></b><br><small><b>mainly applicable in Southeast Asia, West Asia, Europe, Africa</b></small>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"> <a href="http://www.waveshare.com/SIM7600E-H-4G-hat.htm" target="_blank" rel="nofollow"><img alt="SIM7600E-H.jpg" src="SIM7600CE-T_E-H_A-H_G-H%204G%20Modules%20-%20Waveshare%20Wiki_files/thumb.jpg" srcset="/w/thumb.php?f=SIM7600E-H.jpg&amp;width=450 1.5x, /w/thumb.php?f=SIM7600E-H.jpg&amp;width=600 2x" width="300" height="224"></a><br>
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"> <b><a href="https://www.waveshare.com/wiki/SIM7600E_LTE_Cat-1_HAT" title="SIM7600E LTE Cat-1 HAT" class="mw-redirect">SIM7600E LTE Cat-1 HAT</a></b><br><small><b>mainly applicable in North America (US, CA)</b></small>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"> <a href="http://www.waveshare.com/sim7600e-lte-cat-1-hat.htm" target="_blank" rel="nofollow"><img alt="SIM7600E-H.jpg" src="SIM7600CE-T_E-H_A-H_G-H%204G%20Modules%20-%20Waveshare%20Wiki_files/thumb.jpg" srcset="/w/thumb.php?f=SIM7600E-H.jpg&amp;width=450 1.5x, /w/thumb.php?f=SIM7600E-H.jpg&amp;width=600 2x" width="300" height="224"></a><br>
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"> <b><a href="https://www.waveshare.com/wiki/SIM7600A-H_4G_HAT" title="SIM7600A-H 4G HAT" class="mw-redirect">SIM7600A-H 4G HAT</a></b><br><small><b>the global version for Pi</b></small>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"> <a href="http://www.waveshare.com/SIM7600A-H-4G-hat.htm" target="_blank" rel="nofollow"><img alt="SIM7600E-H.jpg" src="SIM7600CE-T_E-H_A-H_G-H%204G%20Modules%20-%20Waveshare%20Wiki_files/thumb.jpg" srcset="/w/thumb.php?f=SIM7600E-H.jpg&amp;width=450 1.5x, /w/thumb.php?f=SIM7600E-H.jpg&amp;width=600 2x" width="300" height="224"></a><br>
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"> <b><a href="https://www.waveshare.com/wiki/SIM7600G-H_4G_HAT" title="SIM7600G-H 4G HAT" class="mw-redirect">SIM7600G-H 4G HAT</a></b><br><small><b>the global version for Jetson Nano</b></small>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"> <a href="http://www.waveshare.com/SIM7600G-H-4G-hat.htm" target="_blank" rel="nofollow"><img alt="SIM7600E-H.jpg" src="SIM7600CE-T_E-H_A-H_G-H%204G%20Modules%20-%20Waveshare%20Wiki_files/thumb.jpg" srcset="/w/thumb.php?f=SIM7600E-H.jpg&amp;width=450 1.5x, /w/thumb.php?f=SIM7600E-H.jpg&amp;width=600 2x" width="300" height="224"></a><br>
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table class="roundy" style="background: transparent;width:100%;">
+
+<tbody><tr>
+<td class="at-c textwhite"> <b><a href="https://www.waveshare.com/wiki/SIM7600G-H_4G_for_Jetson_Nano" title="SIM7600G-H 4G for Jetson Nano">SIM7600G-H 4G for Jetson Nano</a></b>
+</td></tr>
+<tr>
+<td class="at-c bgwhite" style="margin:5px;"> <a href="https://www.waveshare.com/sim7600g-h-4g-for-jetson-nano.htm" target="_blank" rel="nofollow"><img alt="SIM7600G-H-4G-for-Jetson-Nano-1.jpg" src="SIM7600CE-T_E-H_A-H_G-H%204G%20Modules%20-%20Waveshare%20Wiki_files/thumb_002.jpg" srcset="/w/thumb.php?f=SIM7600G-H-4G-for-Jetson-Nano-1.jpg&amp;width=450 1.5x, /w/thumb.php?f=SIM7600G-H-4G-for-Jetson-Nano-1.jpg&amp;width=600 2x" width="300" height="225"></a><br>
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table class="roundy" style="background: transparent; border-collapse:collapse;width:100%;">
+<tbody><tr>
+<td style="width:2%;">
+</td>
+<td style="width:3%;">
+</td>
+<th colspan="2" class="at-c roundytop bgl-white" width="90%"> Primary Attribute
+</th>
+<td style="width:3%;">
+</td>
+<td style="width:2%;">
+</td></tr>
+<tr>
+<td colspan="6" class="at-c roundytl roundytr bgwhite b-blue" style="border-width: 0 0 1px 0;" width="90px"> <b>Category:</b> <a href="https://www.waveshare.com/wiki/Category:Modules" title="Category:Modules">Modules</a>, <a href="https://www.waveshare.com/wiki/Category:4G" title="Category:4G">4G</a>, <a href="https://www.waveshare.com/wiki/Category:GPS/GSM" title="Category:GPS/GSM">GPS/GSM</a>, <a href="https://www.waveshare.com/wiki/Category:Raspberry_Pi" title="Category:Raspberry Pi">Raspberry Pi</a>
+</td></tr>
+<tr style="display:none;">
+<th colspan="3" class="at-r bgwhite b-blue" style="border-width: 0 0 1px 0;" width="90px"> {{{userDefinedInfo}}}:
+</th>
+<td colspan="3" class="at-l b-blue bgwhite" style="border-width: 0 0 1px 0;"> {{{userdefinedvalue}}}
+</td></tr>
+<tr>
+<td colspan="6" class="at-c roundybl roundybr bgwhite" width="90px"><b>Brand:</b> Waveshare
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table class="a-r roundy" style="background: transparent; border-collapse:collapse;width:100%;">
+<tbody><tr>
+<td style="width:2%;">
+</td>
+<td style="width:3%;">
+</td>
+<th colspan="2" class="at-c roundytop bgl-white" width="90%"> Website
+</th>
+<td style="width:3%;">
+</td>
+<td style="width:2%;">
+</td></tr>
+<tr>
+<td colspan="6" class="at-c roundytl roundytr bgwhite b-blue" style="border-width: 0 0 1px 0;" width="90px"> <b>English:</b> <a rel="nofollow" target="_blank" class="external text" href="http://www.waveshare.com/SIM7600E-H-4G-HAT.htm">Waveshare website</a>
+</td></tr>
+<tr>
+<td colspan="6" class="at-c roundybl roundybr bgwhite" width="90px"> <b>Chinese:</b> <a rel="nofollow" target="_blank" class="external text" href="http://www.waveshare.net/shop/SIM7600E-H-4G-HAT.htm">官方中文站点</a>
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table class="a-r roundy" style="background: transparent; border-collapse:collapse;width:100%;">
+<tbody><tr>
+<td style="width:2%;">
+</td>
+<td style="width:3%;">
+</td>
+<th colspan="2" class="at-c roundytop bgl-white" width="90%"> Onboard Interfaces
+</th>
+<td style="width:3%;">
+</td>
+<td style="width:2%;">
+</td></tr>
+<tr>
+<td colspan="6" class="at-l roundy bgwhite b-blue" style="border-width: 0 0 1px 0;" width="90px">
+<table class="roundy bgwhite fulltable" style="text-align:center">
+
+<tbody><tr>
+<td class="roundy bl-gray bw-1" style="width:25%;;"> <small><b><a href="https://www.waveshare.com/wiki/Category:RPi_interface" title="Category:RPi interface">RPi</a></b></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;;"> <small><b><a href="https://www.waveshare.com/wiki/Category:UART_interface" title="Category:UART interface">UART</a></b></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"> <small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"> <small></small>
+</td></tr>
+<tr>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"> <small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"> <small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"> <small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"> <small></small>
+</td></tr>
+<tr>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"> <small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"> <small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"> <small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"> <small></small>
+</td></tr>
+<tr>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"> <small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"> <small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"> <small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"> <small></small>
+</td></tr>
+<tr>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"> <small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"> <small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"> <small></small>
+</td>
+<td class="roundy bl-gray bw-1" style="width:25%;display:none;"> <small></small>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr>
+<td>
+<table class="a-r roundy" style="background: transparent; border-collapse:collapse;width:100%;">
+<tbody><tr>
+<td style="width:2%;">
+</td>
+<td style="width:3%;">
+</td>
+<th colspan="2" class="at-c roundytop bgl-white" width="90%"> Related Products
+</th>
+<td style="width:3%;">
+</td>
+<td style="width:2%;">
+</td></tr>
+<tr>
+<td colspan="6" class="at-l roundy bgwhite b-blue" style="border-width: 0 0 1px 0;" width="90px">
+<ul>
+<li> <a href="https://www.waveshare.com/wiki/L76X_GPS_HAT" title="L76X GPS HAT">L76X GPS HAT</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/L76X_GPS_Module" title="L76X GPS Module">L76X GPS Module</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/UART_GPS_NEO-7M-C_(B)" title="UART GPS NEO-7M-C (B)">UART GPS NEO-7M-C (B)</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/UART_GPS_NEO-7M-C" title="UART GPS NEO-7M-C">UART GPS NEO-7M-C</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/UART_GPS_NEO-6M_(B)" title="UART GPS NEO-6M (B)">UART GPS NEO-6M (B)</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/UART_GPS_NEO-6M-C" title="UART GPS NEO-6M-C">UART GPS NEO-6M-C</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/UART_GPS_NEO-6M" title="UART GPS NEO-6M">UART GPS NEO-6M</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/NEO-7M-C" title="NEO-7M-C">NEO-7M-C</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/NEO-6M-C" title="NEO-6M-C">NEO-6M-C</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/NEO-M8T_GNSS_TIMING_HAT" title="NEO-M8T GNSS TIMING HAT">NEO-M8T GNSS TIMING HAT</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/MAX-7Q_GNSS_HAT" title="MAX-7Q GNSS HAT">MAX-7Q GNSS HAT</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/MAX-M8Q_GNSS_HAT" title="MAX-M8Q GNSS HAT">MAX-M8Q GNSS HAT</a>
+</li>
+<li> <span class="t-gray"><a href="https://www.waveshare.com/wiki/NEO-6M" title="NEO-6M">[Retired] NEO-6M</a></span>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/GSM/GPRS/GPS_Shield_(B)" title="GSM/GPRS/GPS Shield (B)">GSM/GPRS/GPS Shield (B)</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/GSM/GPRS/GNSS_HAT" title="GSM/GPRS/GNSS HAT">GSM/GPRS/GNSS HAT</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/SIM800C_GSM/GPRS_HAT" title="SIM800C GSM/GPRS HAT">SIM800C GSM/GPRS HAT</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/SIM7000E_NB-IoT_HAT" title="SIM7000E NB-IoT HAT">SIM7000E NB-IoT HAT</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/SIM7020E_NB-IoT_HAT" title="SIM7020E NB-IoT HAT">SIM7020E NB-IoT HAT</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/SIM7080G_Cat-M/NB-IoT_HAT" title="SIM7080G Cat-M/NB-IoT HAT">SIM7080G Cat-M/NB-IoT HAT</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/SIM7600CE-T_4G_HAT" title="SIM7600CE-T 4G HAT" class="mw-redirect">SIM7600CE-T 4G HAT</a>
+</li>
+<li> <strong class="selflink">SIM7600E-H 4G HAT</strong>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/SIM7600A-H_4G_HAT" title="SIM7600A-H 4G HAT" class="mw-redirect">SIM7600A-H 4G HAT</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/SIM7600G-H_4G_HAT" title="SIM7600G-H 4G HAT" class="mw-redirect">SIM7600G-H 4G HAT</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/SIM7600CE-CNSE_4G_DONGLE" title="SIM7600CE-CNSE 4G DONGLE" class="mw-redirect">SIM7600CE-CNSE 4G DONGLE</a>
+</li>
+<li> <a href="https://www.waveshare.com/wiki/SIM7600G-H_4G_DONGLE" title="SIM7600G-H 4G DONGLE">SIM7600G-H 4G DONGLE</a>
+</li>
+<li> <span class="t-gray"><a href="https://www.waveshare.com/wiki/GSM/GPRS/GPS_Shield" title="GSM/GPRS/GPS Shield">[Retired] GSM/GPRS/GPS Shield</a></span>
+</li>
+</ul>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a href="#" class="internal" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Resources"><span class="tocnumber">2</span> <span class="toctext">Resources</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Related_Instruction"><span class="tocnumber">3</span> <span class="toctext">Related Instruction</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Tools"><span class="tocnumber">4</span> <span class="toctext">Tools</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#SIM7600_Related"><span class="tocnumber">5</span> <span class="toctext">SIM7600 Related</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Datasheets"><span class="tocnumber">5.1</span> <span class="toctext">Datasheets</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Application_Note"><span class="tocnumber">5.2</span> <span class="toctext">Application Note</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#FAQ"><span class="tocnumber">6</span> <span class="toctext">FAQ</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Please_contact_us_by_Email.2FSkype.2FWeChat_for_technology_support.Our_response_may_be_delay.2C_you_can_just_leave_your_questions.2C_we_will_reply_to_you_as_soon_as_possible_in_working_time."><span class="tocnumber">6.1</span> <span class="toctext">Please
+ contact us by Email/Skype/WeChat for technology support.Our response 
+may be delay, you can just leave your questions, we will reply to you as
+ soon as possible in working time.</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>4G/3G/2G/GSM/GPRS/GNSS HAT for Raspberry Pi, Based on SIM7600E-H
+</p>
+<table>
+
+<tbody><tr>
+<td><a rel="nofollow" target="_blank" class="external text" href="http://www.waveshare.com/SIM7600E-H-4G-HAT.htm">More</a>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Resources">Resources</span></h2>
+<ul>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7600E-H-4G-HAT-Manual-EN.pdf" title="File:SIM7600E-H-4G-HAT-Manual-EN.pdf">Manual</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7600E-H-4G-HAT-Schematic.pdf" title="File:SIM7600E-H-4G-HAT-Schematic.pdf">SIM7600X 4G HAT Schematic</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7600G-H-4G-for-Jetson-Nano-Schematic.pdf" title="File:SIM7600G-H-4G-for-Jetson-Nano-Schematic.pdf">SIM7600X 4G for Jetson Nano Schematic</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7600X-4G-HAT-Demo.7z" title="File:SIM7600X-4G-HAT-Demo.7z"> Source code</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7X00-Driver.7z" title="File:SIM7X00-Driver.7z"> SIM7600 Driver</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7600-size.png" title="File:SIM7600-size.png"> Dimensions</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7600_3D_Drawing.zip" title="File:SIM7600 3D Drawing.zip">3D Drawing</a>
+</li>
+</ul>
+<h2><span class="mw-headline" id="Related_Instruction">Related Instruction</span></h2>
+<ul>
+<li><a href="https://www.waveshare.com/wiki/Raspberry_Pi_networked_via_RNDIS" title="Raspberry Pi networked via RNDIS">Raspberry Pi networked via RNDIS</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/Raspberry_Pi_networked_via_NDIS" title="Raspberry Pi networked via NDIS">Raspberry Pi networked via NDIS</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/SIM868_PPP_Dail-up_Networking" title="SIM868 PPP Dail-up Networking">SIM868 PPP Dail-up Networking</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:Gprs.7z" title="File:Gprs.7z">gprs</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7600X-Raspberry-Pi-GPS.mp4" title="File:SIM7600X-Raspberry-Pi-GPS.mp4">GPS positioning under Raspberry Pi</a>
+</li>
+</ul>
+<h2><span class="mw-headline" id="Tools">Tools</span></h2>
+<ul>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7600-AT-SSCOM-EN.7z" title="File:SIM7600-AT-SSCOM-EN.7z">sscom (with sim7600 AT commands)</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIMCom_GPS_DEMO.7z" title="File:SIMCom GPS DEMO.7z">SIMCom GPS</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:NetAssist.7z" title="File:NetAssist.7z">NetAssist</a>
+</li>
+</ul>
+<h2><span class="mw-headline" id="SIM7600_Related">SIM7600 Related</span></h2>
+<h3><span class="mw-headline" id="Datasheets">Datasheets</span></h3>
+<ul>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7600X-H_SPEC_20180124.pdf" title="File:SIM7600X-H SPEC 20180124.pdf"> SIM7600X-H SPEC</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7600G-H_SPEC_EN_20190731.pdf" title="File:SIM7600G-H SPEC EN 20190731.pdf"> SIM7600G-H SPEC</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7500_SIM7600_Series_AT_Command_Manual_V1.08.pdf" title="File:SIM7500 SIM7600 Series AT Command Manual V1.08.pdf"> AT Command Manual_V1.08</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7500_SIM7600_Series_AT_Command_Manual_V1.12.pdf" title="File:SIM7500 SIM7600 Series AT Command Manual V1.12.pdf"> SIM7500_SIM7600 Series_AT Command Manual_V1.12</a>
+</li>
+</ul>
+<h3><span class="mw-headline" id="Application_Note">Application Note</span></h3>
+<ul>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7X00_Series_GPIO_Application_Note_V1.00.pdf" title="File:SIM7X00 Series GPIO Application Note V1.00.pdf">SIM7X00 Series_GPIO_Application Note</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7X00_Series_SAT_Application_Note_V1.00.pdf" title="File:SIM7X00 Series SAT Application Note V1.00.pdf">SIM7X00 Series_SAT_Application Note</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7X00_Series_SMS_Application_Note_V1.00.pdf" title="File:SIM7X00 Series SMS Application Note V1.00.pdf">SIM7X00 Series_SMS_Application Note</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:AN_SMS_V1.01.pdf" title="File:AN SMS V1.01.pdf">SMS Application notes</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7X00_Series_TCPIP_Application_Note_V1.00.pdf" title="File:SIM7X00 Series TCPIP Application Note V1.00.pdf">SIM7X00 Series_TCPIP_Application Note</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7500_SIM7600_SIM7800_Series_HTTP_AT_Command_Manual_V1.00.pdf" title="File:SIM7500 SIM7600 SIM7800 Series HTTP AT Command Manual V1.00.pdf">SIM7600 Series_HTTP_AT Command Manual</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7500_SIM7600_SIM7800_Series_SSL_AT_Command_Manual_V1.00.pdf" title="File:SIM7500 SIM7600 SIM7800 Series SSL AT Command Manual V1.00.pdf">SIM7600 Series_SSL_AT Command Manual</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7X00_Series_UART_Application_Note_V1.00.pdf" title="File:SIM7X00 Series UART Application Note V1.00.pdf">SIM7X00 Series_UART_Application Note</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7X00_Series_GPS_Application_Note_V1.00.pdf" title="File:SIM7X00 Series GPS Application Note V1.00.pdf">SIM7X00 Series_GPS_Application Note</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7500_SIM7600_Series_MQTT_ATC_V1.01.pdf" title="File:SIM7500 SIM7600 Series MQTT ATC V1.01.pdf"> SIM7600 Series_MQTT_ATC</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7X00_Audio_Application_Note_V1.00.pdf" title="File:SIM7X00 Audio Application Note V1.00.pdf"> SIM7X00_Audio_Application_Note</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7100_SIM7500_SIM7600_Sleep_Mode_Application_Note_V1.01.pdf" title="File:SIM7100 SIM7500 SIM7600 Sleep Mode Application Note V1.01.pdf"> SIM7600_Sleep Mode_Application Note</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7100_SIM7500_SIM7600_Series_LBS_Application_Note_V1.00.pdf" title="File:SIM7100 SIM7500 SIM7600 Series LBS Application Note V1.00.pdf"> SIM7600 Series_LBS_Application Note</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7100_SIM7500_SIM7600_Series_USB_AUDIO_Application_Note_V1.03.pdf" title="File:SIM7100 SIM7500 SIM7600 Series USB AUDIO Application Note V1.03.pdf"> SIM7600 Series_USB AUDIO_Application Note</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7100_SIM7500_SIM7600_Series_UIM_HOT_SWAP_Application_Note_V1.01.pdf" title="File:SIM7100 SIM7500 SIM7600 Series UIM HOT SWAP Application Note V1.01.pdf"> SIM7600 Series_UIM HOT SWAP_Application Note</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7100_SIM7600M22_Series_TTS_Application_Note_V1.02.pdf" title="File:SIM7100 SIM7600M22 Series TTS Application Note V1.02.pdf"> SIM7600M22 Series_TTS_Application Note</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7600_Series_HSIC_LAN_Application_Note_V1.00.pdf" title="File:SIM7600 Series HSIC LAN Application Note V1.00.pdf"> SIM7600 Series_HSIC_LAN_Application_Note</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7600_Series_Hardware_Design_V1.02.pdf" title="File:SIM7600 Series Hardware Design V1.02.pdf"> SIM7600 Series Hardware Design</a>
+</li>
+<li><a href="https://www.waveshare.com/wiki/File:SIM7600G_SIM7600G-H_Hardware_Design_V1.00.pdf" title="File:SIM7600G SIM7600G-H Hardware Design V1.00.pdf"> SIM7600G-H Hardware Design</a>
+</li>
+</ul>
+<p><a rel="nofollow" target="_blank" class="external text" href="http://www.simcom.com/product/371-en.html">For More...</a>
+</p>
+<h2><span class="mw-headline" id="FAQ">FAQ</span></h2>
+<h3 style="text-align:center; width: 600px"><span class="mw-headline" id="Please_contact_us_by_Email.2FSkype.2FWeChat_for_technology_support.Our_response_may_be_delay.2C_you_can_just_leave_your_questions.2C_we_will_reply_to_you_as_soon_as_possible_in_working_time.">Please
+ contact us by Email/Skype/WeChat for technology support.Our response 
+may be delay, you can just leave your questions, we will reply to you as
+ soon as possible in working time.</span></h3>
+<table class="bd-yellow at-c" style="table-layout:fixed;border-radius:50px;width:600px;border:2px solid #{{{bordercolor}}}">
+
+<tbody><tr>
+<td class="bg-yellow roundy-65" style="table-layout:fixed;border-radius:100px;padding:10px;width:100px;background:#{{{background}}};"><a href="https://www.waveshare.com/wiki/File:Service_email.png" class="image fancybox"><img alt="Service email.png" src="SIM7600CE-T_E-H_A-H_G-H%204G%20Modules%20-%20Waveshare%20Wiki_files/Service_email.png" width="100" height="69"></a>
+</td>
+<td class="bg-green" style="border-radius:100px;background:#{{{background}}};font-weight:bold; font-size:20px;"> service@waveshare.com
+</td></tr>
+<tr>
+<td class="bg-yellow roundy-65" style="table-layout:fixed;border-radius:100px;padding:10px;background:#{{{background}}};"><a href="https://www.waveshare.com/wiki/File:Service_skype.png" class="image fancybox"><img alt="Service skype.png" src="SIM7600CE-T_E-H_A-H_G-H%204G%20Modules%20-%20Waveshare%20Wiki_files/Service_skype.png" width="100" height="69"></a>
+</td>
+<td class="bg-green" style="border-radius:100px;background:#{{{background}}};font-weight:bold; font-size:20px;"> service@waveshare
+</td></tr>
+<tr>
+<td class="bg-yellow roundy-65" style="table-layout:fixed;border-radius:100px;padding:10px;width:100px;background:#{{{background}}};"><a href="https://www.waveshare.com/wiki/File:Service_wechat.png" class="image fancybox"><img alt="Service wechat.png" src="SIM7600CE-T_E-H_A-H_G-H%204G%20Modules%20-%20Waveshare%20Wiki_files/Service_wechat.png" width="100" height="69"></a>
+</td>
+<td class="bg-green" style="border-radius:100px;background:#{{{background}}};;font-weight:bold; font-size:20px;"> <a href="https://www.waveshare.com/wiki/File:Webchat_Linzeru.png" class="image fancybox"><img alt="Webchat Linzeru.png" src="SIM7600CE-T_E-H_A-H_G-H%204G%20Modules%20-%20Waveshare%20Wiki_files/thumb.png" srcset="/w/thumb.php?f=Webchat_Linzeru.png&amp;width=150 1.5x, /w/thumb.php?f=Webchat_Linzeru.png&amp;width=200 2x" width="100" height="100"></a>
+</td></tr>
+<tr>
+<td class="bg-yellow roundy-65" style="table-layout:fixed;border-radius:100px;padding:10px;width:100px;background:#{{{background}}};"><a href="https://www.waveshare.com/wiki/File:Service_time.png" class="image fancybox"><img alt="Service time.png" src="SIM7600CE-T_E-H_A-H_G-H%204G%20Modules%20-%20Waveshare%20Wiki_files/Service_time.png" width="100" height="69"></a>
+</td>
+<td class="bg-green" style="border-radius:100px;background:#{{{background}}};; font-weight:bold; font-size:20px;"> 09:00 - 18:00 (UTC+8 Monday to Staturday)
+</td></tr></tbody></table>
+
+<!-- 
+NewPP limit report
+CPU time usage: 0.220 seconds
+Real time usage: 0.232 seconds
+Preprocessor visited node count: 625/1000000
+Preprocessor generated node count: 5609/1000000
+Post‐expand include size: 12149/2097152 bytes
+Template argument size: 3326/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 0/100
+-->
+</div>								<div class="printfooter">
+				Retrieved from "<a href="https://www.waveshare.com/w/index.php?title=SIM7600E-H_4G_HAT&amp;oldid=20246">https://www.waveshare.com/w/index.php?title=SIM7600E-H_4G_HAT&amp;oldid=20246</a>"				</div>
+												<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://www.waveshare.com/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="https://www.waveshare.com/wiki/Category:Modules" title="Category:Modules">Modules</a></li><li><a href="https://www.waveshare.com/wiki/Category:4G" title="Category:4G">4G</a></li><li><a href="https://www.waveshare.com/wiki/Category:GPS/GSM" title="Category:GPS/GSM">GPS/GSM</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://www.waveshare.com/wiki/Category:RPi_interface" title="Category:RPi interface">RPi interface</a></li><li><a href="https://www.waveshare.com/wiki/Category:UART_interface" title="Category:UART interface">UART interface</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-login"><a href="https://www.waveshare.com/w/index.php?title=Special:UserLogin&amp;returnto=SIM7600E-H+4G+HAT" title="You are encouraged to log in; however, it is not mandatory [alt-shift-o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li id="ca-nstab-main" class="selected"><span><a href="https://www.waveshare.com/wiki/SIM7600E-H_4G_HAT" title="View the content page [alt-shift-c]" accesskey="c">Page</a></span></li>
+					<li id="ca-talk" class="new"><span><a href="https://www.waveshare.com/w/index.php?title=Talk:SIM7600E-H_4G_HAT&amp;action=edit&amp;redlink=1" title="Discussion about the content page [alt-shift-t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label" tabindex="0"><span>Variants</span><a href="#" tabindex="-1"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="https://www.waveshare.com/wiki/SIM7600E-H_4G_HAT">Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="https://www.waveshare.com/w/index.php?title=SIM7600E-H_4G_HAT&amp;action=edit" title="This page is protected.
+You can view its source [alt-shift-e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible" style=""><span><a href="https://www.waveshare.com/w/index.php?title=SIM7600E-H_4G_HAT&amp;action=history" title="Past revisions of this page [alt-shift-h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label" tabindex="0"><span>Actions</span><a href="#" tabindex="-1"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Waveshare Wiki [alt-shift-f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Special:Search" name="title"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton">		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel" class="collapsible-nav">
+					<div id="p-logo" role="banner"><a style="background-image: url(/w/upload/logo/waveshare-logo.png);" href="https://www.waveshare.com/wiki/Main_Page" title="Visit the main page"></a></div>
+				<div class="portal first persistent" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+	<h3 id="p-navigation-label">Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="https://www.waveshare.com/wiki/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z">Main page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal expanded" role="navigation" id="p-mini_PC" aria-labelledby="p-mini_PC-label">
+	<h3 id="p-mini_PC-label" tabindex="2"><a href="#" aria-haspopup="true" aria-controls="p-mini_PC-list" role="button" aria-pressed="true" aria-expanded="true">mini PC</a></h3>
+	<div class="body" style="display: block;">
+		<ul id="p-mini_PC-list">
+			<li id="n-Raspberry-Pi"><a href="https://www.waveshare.com/wiki/Main_Page#Raspberry_Pi">Raspberry Pi</a></li>
+			<li id="n-BeagleBone"><a href="https://www.waveshare.com/wiki/Main_Page#BeagleBone">BeagleBone</a></li>
+			<li id="n-Cubie-Series"><a href="https://www.waveshare.com/wiki/Main_Page#Cubie_Series">Cubie Series</a></li>
+			<li id="n-Misc"><a href="https://www.waveshare.com/wiki/Main_Page#Misc">Misc</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-MCU_Tools" aria-labelledby="p-MCU_Tools-label">
+	<h3 id="p-MCU_Tools-label" tabindex="3"><a href="#" aria-haspopup="true" aria-controls="p-MCU_Tools-list" role="button" aria-pressed="false" aria-expanded="false">MCU Tools</a></h3>
+	<div class="body">
+		<ul id="p-MCU_Tools-list">
+			<li id="n-STM32"><a href="https://www.waveshare.com/wiki/Main_Page#STM32">STM32</a></li>
+			<li id="n-STM8"><a href="https://www.waveshare.com/wiki/Main_Page#STM8">STM8</a></li>
+			<li id="n-LPC"><a href="https://www.waveshare.com/wiki/Main_Page#LPC">LPC</a></li>
+			<li id="n-AVR"><a href="https://www.waveshare.com/wiki/Main_Page#AVR">AVR</a></li>
+			<li id="n-PIC-.2F-C8051F"><a href="https://www.waveshare.com/wiki/Main_Page#PIC_.2F_C8051F">PIC / C8051F</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-FPGA_Tools" aria-labelledby="p-FPGA_Tools-label">
+	<h3 id="p-FPGA_Tools-label" tabindex="4"><a href="#" aria-haspopup="true" aria-controls="p-FPGA_Tools-list" role="button" aria-pressed="false" aria-expanded="false">FPGA Tools</a></h3>
+	<div class="body">
+		<ul id="p-FPGA_Tools-list">
+			<li id="n-ALTERA"><a href="https://www.waveshare.com/wiki/Main_Page#ALTERA">ALTERA</a></li>
+			<li id="n-XILINX"><a href="https://www.waveshare.com/wiki/Main_Page#XILINX">XILINX</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-Arduino_Compatible" aria-labelledby="p-Arduino_Compatible-label">
+	<h3 id="p-Arduino_Compatible-label" tabindex="5"><a href="#" aria-haspopup="true" aria-controls="p-Arduino_Compatible-list" role="button" aria-pressed="false" aria-expanded="false">Arduino Compatible</a></h3>
+	<div class="body">
+		<ul id="p-Arduino_Compatible-list">
+			<li id="n-Main-Board"><a href="https://www.waveshare.com/wiki/Main_Page#Main_Board">Main Board</a></li>
+			<li id="n-Shields-.2F-Adapters"><a href="https://www.waveshare.com/wiki/Main_Page#Shields_.2F_Adapters">Shields / Adapters</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-Modules" aria-labelledby="p-Modules-label">
+	<h3 id="p-Modules-label" tabindex="6"><a href="#" aria-haspopup="true" aria-controls="p-Modules-list" role="button" aria-pressed="false" aria-expanded="false">Modules</a></h3>
+	<div class="body">
+		<ul id="p-Modules-list">
+			<li id="n-OLEDs-.2F-LCDs"><a href="https://www.waveshare.com/wiki/Main_Page#OLEDs_.2F_LCDs">OLEDs / LCDs</a></li>
+			<li id="n-Wireless-Communication"><a href="https://www.waveshare.com/wiki/Main_Page#Wireless_Communication">Wireless Communication</a></li>
+			<li id="n-Wired-Communication"><a href="https://www.waveshare.com/wiki/Main_Page#Wired_Communication">Wired Communication</a></li>
+			<li id="n-Cameras"><a href="https://www.waveshare.com/wiki/Main_Page#Cameras">Cameras</a></li>
+			<li id="n-Sensors"><a href="https://www.waveshare.com/wiki/Main_Page#Sensors">Sensors</a></li>
+			<li id="n-Storage"><a href="https://www.waveshare.com/wiki/Main_Page#Storage">Storage</a></li>
+			<li id="n-Others"><a href="https://www.waveshare.com/wiki/Main_Page#Others">others</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-Support" aria-labelledby="p-Support-label">
+	<h3 id="p-Support-label" tabindex="7"><a href="#" aria-haspopup="true" aria-controls="p-Support-list" role="button" aria-pressed="false" aria-expanded="false">Support</a></h3>
+	<div class="body">
+		<ul id="p-Support-list">
+			<li id="n-Waveshare"><a href="http://www.waveshare.com/" rel="nofollow" target="_blank">Waveshare</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+	<h3 id="p-tb-label" tabindex="8"><a href="#" aria-haspopup="true" aria-controls="p-tb-list" role="button" aria-pressed="false" aria-expanded="false">Tools</a></h3>
+	<div class="body">
+		<ul id="p-tb-list">
+			<li id="t-whatlinkshere"><a href="https://www.waveshare.com/wiki/Special:WhatLinksHere/SIM7600E-H_4G_HAT" title="A list of all wiki pages that link here [alt-shift-j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="https://www.waveshare.com/wiki/Special:RecentChangesLinked/SIM7600E-H_4G_HAT" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="https://www.waveshare.com/wiki/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li>
+			<li id="t-print"><a href="https://www.waveshare.com/w/index.php?title=SIM7600E-H_4G_HAT&amp;printable=yes" rel="alternate" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li>
+			<li id="t-permalink"><a href="https://www.waveshare.com/w/index.php?title=SIM7600E-H_4G_HAT&amp;oldid=20246" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="https://www.waveshare.com/w/index.php?title=SIM7600E-H_4G_HAT&amp;action=info">Page information</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 25 September 2020, at 09:17.</li>
+											<li id="footer-info-viewcount">This page has been accessed 151,826 times.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://www.waveshare.com/wiki/Waveshare_Wiki:Privacy_policy" title="Waveshare Wiki:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="https://www.waveshare.com/wiki/Waveshare_Wiki:About" title="Waveshare Wiki:About">About Waveshare Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="https://www.waveshare.com/wiki/Waveshare_Wiki:General_disclaimer" title="Waveshare Wiki:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="SIM7600CE-T_E-H_A-H_G-H%204G%20Modules%20-%20Waveshare%20Wiki_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31"></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.edit0","ext.gadget.timer","ext.gadget.collapsible","ext.gadget.msp","ext.gadget.tabber","ext.FancyBoxThumbs","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>
+var fbtFancyBoxOptions = {"openEffect":"elastic","closeEffect":"elastic","helpers":{"title":{"type":"inside"}}};
+</script>
+<script src="SIM7600CE-T_E-H_A-H_G-H%204G%20Modules%20-%20Waveshare%20Wiki_files/load.php"></script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":432});
+}</script>
+	
+
+<div style="display: none; font-size: 13px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body></html>
