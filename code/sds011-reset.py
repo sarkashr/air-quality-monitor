@@ -11,5 +11,5 @@ print('set to active mode  15 seconds')
 time.sleep(15)  # Allow time for the sensor to measure properly
 print(sensor.query())
 # There are other methods to configure the device, go check them out.
-sensor = None
 print('end of reset script')
+# sensor = None
