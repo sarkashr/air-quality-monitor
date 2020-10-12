@@ -23,11 +23,11 @@ then add the following lines to the end of crontab file:
 @reboot python3 /home/pi/air-quality-monitor/code/sds011-reset.py
 @reboot python3 /home/pi/air-quality-monitor/code/read_and_publish.py &
 ```
-Note: Modify the MQTT topic in the read_and_publish.py script accordingly.
+Note: Modify the MQTT topic and client_id in config.ini accordingly.
 
 --------------------------------------------------------------------------------
 
-For activating SIM7600E module:
+For activating SIM7600 module:
 ```
 sudo apt install libqmi-utils && udhcpc
 ```
