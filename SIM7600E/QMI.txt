@@ -1,7 +1,7 @@
 https://github.com/jordy33/sim7600
 -------------------------------------------------------------------------------
 
-sudo apt install libqmi-utils && udhcpc
+$ sudo apt install libqmi-utils && udhcpc
 
 $ sudo apt install libqmi-utils
 $ sudo apt install udhcpc

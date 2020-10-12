@@ -56,11 +56,11 @@ try:
         payload = json.dumps(dictionary, default=str)
         print(payload+"\n\n")
         publish.single(
-            topic="aqm/kabul/station02", #"aqm/kabul/station01",
+            topic="aqm/kabul/station09", #"aqm/kabul/station01",
             payload=payload,
             hostname="broker.hivemq.com",
             port=8000,
-            client_id="Station_02_Mikrorayan", #"Station_01_Office",
+            client_id='Station_09_Dortmund' #"Station_02_Mikrorayan", #"Station_01_Office",
             transport="websockets",
         )
 
