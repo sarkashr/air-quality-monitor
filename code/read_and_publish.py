@@ -7,6 +7,7 @@ import json
 import paho.mqtt.publish as publish
 import sys
 import configparser #https://stackoverflow.com/questions/29344196/creating-a-config-file
+import os
 
 
 def printValues(timing, values, unit_of_measure):
@@ -20,7 +21,8 @@ def printValues(timing, values, unit_of_measure):
 
 
 config = configparser.ConfigParser()
-config.read('config.ini')
+config.read(os.path.dirname(os.path.realpath(__file__))+'/config.ini')
+#https://stackoverflow.com/questions/4934806/how-can-i-find-scripts-directory-with-python
 device_path = config['SDS011']['device_path'] # $ dmesg | grep tty
 timeout = 9                         # timeout on serial line read
 unit_of_measure = SDS011.UnitsOfMeasure.MassConcentrationEuropean
@@ -64,7 +66,7 @@ try:
             payload=payload,
             hostname="broker.hivemq.com",
             port=8000,
-            # client_id='Station_09_Dortmund', #"Station_02_Mikrorayan", #"Station_01_OfficeK3",
+            client_id=config['MQTT']['client_id'], #"Station_02_Mikrorayan", #"Station_01_OfficeK3",
             transport="websockets",
         )
 
