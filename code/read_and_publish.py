@@ -70,7 +70,7 @@ try:
             transport="websockets",
         )
 
-        print("Read was succesfull. Going to sleep now.")
+        print("Read was succesfull. Going to sleep for the next 270 seconds.")
         sensor.workstate = SDS011.WorkStates.Sleeping
         time.sleep(270)
 
