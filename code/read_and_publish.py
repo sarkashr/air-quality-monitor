@@ -6,6 +6,7 @@ from datetime import datetime
 import json
 import paho.mqtt.publish as publish
 import sys
+import configparser #https://stackoverflow.com/questions/29344196/creating-a-config-file
 
 
 def printValues(timing, values, unit_of_measure):
@@ -17,7 +18,10 @@ def printValues(timing, values, unit_of_measure):
           (timing, unit), values[1], ", PM10 ", values[0])
 
 
-device_path = '/dev/ttyUSB0' # $ dmesg | grep tty
+
+config = configparser.ConfigParser()
+config.read('config.ini')
+device_path = config['SDS011']['device_path'] # $ dmesg | grep tty
 timeout = 9                         # timeout on serial line read
 unit_of_measure = SDS011.UnitsOfMeasure.MassConcentrationEuropean
 print('\n\n')
@@ -56,11 +60,11 @@ try:
         payload = json.dumps(dictionary, default=str)
         print(payload+"\n\n")
         publish.single(
-            topic="aqm/kabul/station09", #"aqm/kabul/station01",
+            topic=config['MQTT']['topic'], #"aqm/kabul/station02", #"aqm/kabul/station01",
             payload=payload,
             hostname="broker.hivemq.com",
             port=8000,
-            client_id='Station_09_Dortmund', #"Station_02_Mikrorayan", #"Station_01_Office",
+            # client_id='Station_09_Dortmund', #"Station_02_Mikrorayan", #"Station_01_OfficeK3",
             transport="websockets",
         )
 
