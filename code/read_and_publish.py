@@ -74,7 +74,7 @@ try:
         sensor.workstate = SDS011.WorkStates.Sleeping
         time.sleep(270)
 
-except:
+except KeyboardInterrupt:
     sensor.reset()
     sensor = None
-    sys.exit("\nSensor reset due to a KeyboardInterrupt or an error\n")
+    sys.exit("\nSensor reset due to a KeyboardInterrupt\n")

@@ -27,20 +27,6 @@ Note: Modify the MQTT topic and client_id in config.ini accordingly.
 
 --------------------------------------------------------------------------------
 
-For activating SIM7600 module:
-```
-sudo apt install libqmi-utils && udhcpc
-```
-Then adding the following lines in the crontab just before the `sds011-reset` line:
-(Yes, both lines are the same! Seems to connect when run twice)
-```
-@reboot python3 /home/pi/air-quality-monitor/code/sim7600_connect.py
-@reboot python3 /home/pi/air-quality-monitor/code/sim7600_connect.py
-```
-Note: Modify the APN in the script accordingly(network provider).
-
---------------------------------------------------------------------------------
-
 for setting up a remoteiot.com new device:
 ```
 sudo apt -y install default-jdk
@@ -52,3 +38,17 @@ sudo apt -y install openjdk-11-jre-headless
 
 In the RemoteIoT Dashboard go to Devices and there choose Register New Device.
 Then
+
+--------------------------------------------------------------------------------
+
+For activating SIM7600 module:
+```
+sudo apt install libqmi-utils && udhcpc
+```
+Then adding the following lines in the crontab just before the `reset` line:
+(Yes, both lines are the same! Seems to connect when run twice)
+```
+@reboot python3 /home/pi/air-quality-monitor/code/sim7600_connect.py
+@reboot python3 /home/pi/air-quality-monitor/code/sim7600_connect.py
+```
+Note: Modify the APN in the script accordingly(network provider).
