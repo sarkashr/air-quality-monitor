@@ -37,7 +37,8 @@ dictionary = {}
 
 try:
     while True:
-        sensor.workstate = SDS011.WorkStates.Measuring
+        sensor.reset() # reset is a safer option than just setting the workstate
+        # sensor.workstate = SDS011.WorkStates.Measuring
         print('The sensor needs to warm up for 30 seconds!') # 60 seconds!')
         time.sleep(30)  # Should be 60 seconds to get qualified values. The sensor needs to warm up!
         # sensor.dutycycle = 5  # valid values between 0 and 30
@@ -60,7 +61,7 @@ try:
             time.sleep(2)
 
         payload = json.dumps(dictionary, default=str)
-        print(payload+"\n\n")
+        print('MQTT payload (jsonised)-> '+payload+"\n\n")
         publish.single(
             topic=config['MQTT']['topic'], #"aqm/kabul/station02", #"aqm/kabul/station01",
             payload=payload,
@@ -78,3 +79,8 @@ except KeyboardInterrupt:
     sensor.reset()
     sensor = None
     sys.exit("\nSensor reset due to a KeyboardInterrupt\n")
+
+except:
+    sensor.reset()
+    sensor = None
+    sys.exit("\nSensor reset due to some unknown Error; Please investigate the cause!\n")
