@@ -15,7 +15,10 @@ sudo shutdown -r now
 
 sudo apt install git
 sudo git clone https://github.com/sarkashr/air-quality-monitor.git
+```
+Note: run `sudo git pull` from inside the `air-quality-monitor` directory to sync with the repository.
 
+```
 sudo apt install python3-pip
 sudo pip3 install wheel
 sudo pip3 install -r /home/pi/air-quality-monitor/code/requirements.txt
@@ -47,7 +50,7 @@ Note: Java 11, 10 & 9 don't work on Pi Zero because of ARMv6 architecture.
 
 For activating SIM7600 module:
 ```
-sudo apt install libqmi-utils && udhcpc
+sudo apt install libqmi-utils udhcpc
 ```
 Then adding the following lines in the crontab just before the main script line:
 (Yes, both lines are the same! Seems to connect when run twice)

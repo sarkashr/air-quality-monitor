@@ -1,4 +1,4 @@
-from __init__ import SDS011
+import __init__
 import time
 
 # sensor = SDS011("/dev/ttyUSB0", use_query_mode=True)
@@ -15,15 +15,13 @@ import time
 # sensor = None
 
 print('initialising...')
-sensor = SDS011("/dev/ttyUSB0", use_query_mode=False)
+sensor = __init__.SDS011("/dev/ttyUSB0", use_query_mode=False)
 print('trying to set mode...')
 sensor.set_report_mode(read=True, active=True)
-
 
 # sensor.sleep()  # Turn off fan and diode
 # print('set to sleep mode for 15 seconds')
 # time.sleep(15)
-
 
 print('trying to wake up... (in case in sleep mode)')
 sensor.sleep(sleep=False)  # Turn on fan and diode in case it was in sleep mode
