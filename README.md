@@ -1,5 +1,6 @@
 # air-quality-monitor
 
+--------------------------------------------------------------------------------
 
 Activating SSH on Raspberry Pi:
 
@@ -46,6 +47,7 @@ After filling the fields, copy the command line code and execute it with `sudo` 
 Most likely there's already an open SSH session to the RPi for pasting and executing the above copied command.
 
 Note: Java 11, 10 & 9 don't work on Pi Zero because of ARMv6 architecture.
+
 --------------------------------------------------------------------------------
 
 For activating SIM7600 module:
@@ -59,3 +61,5 @@ Then adding the following lines in the crontab just before the main script line:
 @reboot python3 /home/pi/air-quality-monitor/code/sim7600_connect.py
 ```
 Note: Modify the APN in the script accordingly(network provider).
+
+--------------------------------------------------------------------------------
