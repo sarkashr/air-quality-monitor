@@ -5,6 +5,7 @@ Setting up the Raspberry Pi for running the python code:
 ```
 sudo apt update
 sudo apt upgrade
+sudo shutdown -r now
 
 sudo apt install git
 sudo git clone https://github.com/sarkashr/air-quality-monitor.git
@@ -29,16 +30,13 @@ Note: Modify the MQTT topic and client_id in config.ini accordingly.
 
 for setting up a remoteiot.com new device:
 ```
-sudo apt -y install default-jdk
-```
-or
-```
-sudo apt -y install openjdk-11-jre-headless
+sudo apt -y install openjdk-8-jre-headless
 ```
 
 In the RemoteIoT Dashboard go to Devices and there choose Register New Device.
 Then
 
+Note: Java 11, 10 & 9 don't work on Pi Zero because of ARMv6 architecture.
 --------------------------------------------------------------------------------
 
 For activating SIM7600 module:

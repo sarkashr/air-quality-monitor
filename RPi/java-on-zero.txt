@@ -1,0 +1,3 @@
+https://raspberrypi.stackexchange.com/questions/104203/unable-to-run-java-on-raspberry-pi-zero-vm-is-only-supported-on-armv7-vfp
+
+https://raspberrypi.stackexchange.com/questions/93821/java-11-not-working
