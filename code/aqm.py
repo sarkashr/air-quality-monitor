@@ -1,5 +1,27 @@
-# import serial # package PySerial
-# import struct
+import __init__
+import time
+
+print('initialising...')
+sensor = __init__.SDS011("/dev/ttyUSB0", use_query_mode=False)
+print('trying to set mode...')
+sensor.set_report_mode(read=True, active=True)
+
+# sensor.sleep()  # Turn off fan and diode
+# print('set to sleep mode for 15 seconds')
+# time.sleep(15)
+
+print('trying to wake up... (in case in sleep mode)')
+sensor.sleep(sleep=False)  # Turn on fan and diode in case it was in sleep mode
+print('waiting for 15 seconds...')
+time.sleep(15)  # Allow time for the sensor to measure properly
+print('a test query -> ' + str(sensor.query()))
+print('resetting mode...')
+sensor.set_report_mode(read=True, active=True)
+print('end of reset script')
+sensor = None
+
+# *****************************************************************************
+
 from sds011 import SDS011
 import time
 from datetime import datetime
@@ -79,8 +101,8 @@ except KeyboardInterrupt:
     sensor.reset()
     sensor = None
     sys.exit("\nSensor reset due to a KeyboardInterrupt\n")
-
-except:
-    sensor.reset()
-    sensor = None
-    sys.exit("\nSensor reset due to some unknown Error; Please investigate the cause!\n")
+#
+# except:
+#     sensor.reset()
+#     sensor = None
+#     sys.exit("\nSensor reset due to some unknown Error; Please investigate the cause!\n")
