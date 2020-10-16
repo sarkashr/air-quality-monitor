@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # air-quality-monitor gitignore files
-config.ini
+aqm.cfg
