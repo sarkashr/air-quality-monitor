@@ -60,14 +60,14 @@ Then adding the following lines in the crontab just before the main script line:
 @reboot python3 /home/pi/air-quality-monitor/code/sim7600_connect.py
 @reboot python3 /home/pi/air-quality-monitor/code/sim7600_connect.py
 ```
-Note: Modify the APN in the aqm.cfg accordingly.
+Note: Modify the APN in the aqm.cfg accordingly. For an APN with username and password please let me know so that I can create the config file because it's somewhat tricky.
 
 --------------------------------------------------------------------------------
 
-# Headless Setup
+### Headless Setup
 ![Headless Setup](images/setup_headless.jpg)
 
 --------------------------------------------------------------------------------
 
-# Setup with Display, Keyboard and Ethernet connected
+### Setup with Display, Keyboard and Ethernet connected
 ![Setup with Display, Keyboard and Ethernet connected](images/setup_with_ui.jpg)
