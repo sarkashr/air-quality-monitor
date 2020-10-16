@@ -33,7 +33,7 @@ then add the following lines to the end of crontab file:
 ```
 @reboot python3 /home/pi/air-quality-monitor/code/aqm.py &
 ```
-Note: Modify the MQTT topic and client_id in config.ini file accordingly.
+Note: Modify the MQTT topic and client_id in aqm.cfg file accordingly.
 
 --------------------------------------------------------------------------------
 
@@ -60,6 +60,12 @@ Then adding the following lines in the crontab just before the main script line:
 @reboot python3 /home/pi/air-quality-monitor/code/sim7600_connect.py
 @reboot python3 /home/pi/air-quality-monitor/code/sim7600_connect.py
 ```
-Note: Modify the APN in the script accordingly(network provider).
+Note: Modify the APN in the aqm.cfg accordingly.
 
 --------------------------------------------------------------------------------
+
+# Headless Setup
+![Headless Setup](images/setup_headless.jpg)
+
+# Setup with Display, Keyboard and Ethernet connected
+![Setup with Display, Keyboard and Ethernet connected](images/setup_with_ui.jpg)
