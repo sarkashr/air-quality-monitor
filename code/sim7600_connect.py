@@ -4,7 +4,7 @@ import configparser
 
 
 config = configparser.ConfigParser()
-config.read(os.path.dirname(os.path.realpath(__file__))+'/config.ini')
+config.read(os.path.dirname(os.path.realpath(__file__))+'/aqm.cfg')
 
 
 def bring_sim7600_up():

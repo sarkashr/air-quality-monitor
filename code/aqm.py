@@ -43,7 +43,7 @@ def printValues(timing, values, unit_of_measure):
 
 
 config = configparser.ConfigParser()
-config.read(os.path.dirname(os.path.realpath(__file__))+'/config.ini')
+config.read(os.path.dirname(os.path.realpath(__file__))+'/aqm.cfg')
 #https://stackoverflow.com/questions/4934806/how-can-i-find-scripts-directory-with-python
 device_path = config['SDS011']['device_path'] # $ dmesg | grep tty
 timeout = 9                         # timeout on serial line read

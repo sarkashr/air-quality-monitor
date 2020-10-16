@@ -67,5 +67,7 @@ Note: Modify the APN in the aqm.cfg accordingly.
 # Headless Setup
 ![Headless Setup](images/setup_headless.jpg)
 
+--------------------------------------------------------------------------------
+
 # Setup with Display, Keyboard and Ethernet connected
 ![Setup with Display, Keyboard and Ethernet connected](images/setup_with_ui.jpg)
