@@ -3,7 +3,7 @@ import __init__
 import time
 
 print('initialising...')
-sensor = __init__.SDS011("/dev/ttyUSB0", use_query_mode=False)
+sensor = __init__.SDS011("/dev/ttyUSB0", use_query_mode=True)
 print('trying to set mode...')
 sensor.set_report_mode(read=True, active=True)
 
