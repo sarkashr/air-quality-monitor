@@ -6,6 +6,7 @@ TODO: shift to just one library
 Activating SSH on Raspberry Pi:
 
 Create an empty file named "ssh" and put in the root folder of "boot" partition in the microSD, and NOT in the "rootfs" partition.
+
 --------------------------------------------------------------------------------
 
 Setting up the Raspberry Pi for running the python code:
@@ -37,6 +38,7 @@ Note: Modify the MQTT topic and client_id in aqm.cfg file accordingly. Following
 
 topic = aqm/dortmund/station09
 client_id = Dortmund_Station09
+
 --------------------------------------------------------------------------------
 
 for setting up a remoteiot.com new device:
@@ -49,6 +51,7 @@ After filling the fields, copy the command line code and execute it with `sudo` 
 Most likely there's already an open SSH session to the RPi for pasting and executing the above copied command.
 
 Note: Java 11, 10 & 9 don't work on Pi Zero because of ARMv6 architecture.
+
 --------------------------------------------------------------------------------
 
 For activating SIM7600 module:
@@ -68,11 +71,13 @@ apn = "apn=YOUR_APN,ip-type=4"
 apn = "apn='YOUR_APN',ip-type=4"
 apn = "apn=YOUR_APN,username=YOUR_USERNAME,password=YOUR_PASSWORD,ip-type=4"
 apn = "apn='YOUR_APN',username='YOUR_USERNAME',password='YOUR_PASSWORD',ip-type=4"
+
 --------------------------------------------------------------------------------
 
-### Headless Setup
+#### Headless Setup
 ![Headless Setup](images/setup_headless.jpg)
+
 --------------------------------------------------------------------------------
 
-### Setup with Display, Keyboard and Ethernet connected
-![Setup with Display, Keyboard and Ethernet connected](images/setup_with_ui.jpg)
+#### Setup with Display, Keyboard and Ethernet connected
+![Setup with display, keyboard and ethernet](images/setup_with_ui.jpg)
