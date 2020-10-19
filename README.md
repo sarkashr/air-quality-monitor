@@ -66,11 +66,12 @@ Then adding the following lines in the crontab just before the main script line:
 ```
 
 Note: Modify the APN in the aqm.cfg accordingly. The format can be any one of the followings:
-
+```
 apn = "apn=YOUR_APN,ip-type=4"
 apn = "apn='YOUR_APN',ip-type=4"
 apn = "apn=YOUR_APN,username=YOUR_USERNAME,password=YOUR_PASSWORD,ip-type=4"
 apn = "apn='YOUR_APN',username='YOUR_USERNAME',password='YOUR_PASSWORD',ip-type=4"
+```
 
 --------------------------------------------------------------------------------
 
