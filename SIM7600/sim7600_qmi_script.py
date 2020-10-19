@@ -33,7 +33,6 @@ def connect_qmi():
 
 
 
-
 if __name__ == "__main__":
     bring_sim7600_up()
     set_raw_ip_mode()

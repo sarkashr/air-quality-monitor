@@ -10,6 +10,8 @@ $ sudo apt install udhcpc
 
 https://developers.telnyx.com/docs/v2/wireless/tutorials/sim7600
 
+https://techship.com/faq/how-to-step-by-step-set-up-a-data-connection-over-qmi-interface-using-qmicli-and-in-kernel-driver-qmi-wwan-in-linux/
+
 # *****************************************************************************
 
 # https://forum-raspberrypi.de/forum/thread/44357-waveshare-raspberry-pi-4g-3g-2g-gsm-gprs-gnss-hat-based-on-sim7600e-h-supports-l/

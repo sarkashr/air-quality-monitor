@@ -7,4 +7,3 @@ client_id = Dortmund_Station09
 
 [SIM7600]
 apn = "apn='internet',ip-type=4"
-

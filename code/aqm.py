@@ -1,8 +1,9 @@
+# ********************** START OF RESET SECTION *******************************
 import __init__
 import time
 
 print('initialising...')
-sensor = __init__.SDS011("/dev/ttyUSB0", use_query_mode=False)
+sensor = __init__.SDS011("/dev/ttyUSB0", use_query_mode=True) #False)
 print('trying to set mode...')
 sensor.set_report_mode(read=True, active=True)
 
@@ -19,18 +20,17 @@ print('resetting mode...')
 sensor.set_report_mode(read=True, active=True)
 print('end of reset script')
 sensor = None
+# *********************** END OF RESET SECTION ********************************
 
-# *****************************************************************************
-
+# ***************************** MAIN CODE *************************************
 from sds011 import SDS011
-import time
+# import time
 from datetime import datetime
 import json
 import paho.mqtt.publish as publish
 import sys
 import configparser #https://stackoverflow.com/questions/29344196/creating-a-config-file
 import os
-
 
 def printValues(timing, values, unit_of_measure):
     if unit_of_measure == SDS011.UnitsOfMeasure.MassConcentrationEuropean:
@@ -40,11 +40,9 @@ def printValues(timing, values, unit_of_measure):
     print("Waited %d secs\nValues measured in %s:    PM2.5  " %
           (timing, unit), values[1], ", PM10 ", values[0])
 
-
-
+basedir = os.path.abspath(os.path.dirname(__file__))
 config = configparser.ConfigParser()
-config.read(os.path.dirname(os.path.realpath(__file__))+'/aqm.cfg')
-#https://stackoverflow.com/questions/4934806/how-can-i-find-scripts-directory-with-python
+config.read(os.path.join(basedir, 'aqm.cfg'))
 device_path = config['SDS011']['device_path'] # $ dmesg | grep tty
 timeout = 9                         # timeout on serial line read
 unit_of_measure = SDS011.UnitsOfMeasure.MassConcentrationEuropean
@@ -56,7 +54,6 @@ print(sensor.workstate)
 print(sensor.reportmode)
 print("\n\n")
 dictionary = {}
-
 try:
     while True:
         sensor.reset() # reset is a safer option than just setting the workstate
@@ -72,7 +69,7 @@ try:
             if values is not None:
                 printValues(time.time() - last, values, sensor.unit_of_measure)
                 dictionary = {
-                    "time" : '{:%y-%m-%d %H:%M %S}'.format(ts), # with seconds
+                    "time" : ts.strftime('%Y-%m-%d %H:%M:%S'),
                     # "time" : '{:%y-%m-%d %H:%M}'.format(ts), # without seconds
                     "pm2.5" : values[1],
                     "pm10" : values[0],
@@ -92,16 +89,13 @@ try:
             client_id=config['MQTT']['client_id'], #"Station_02_Mikrorayan", #"Station_01_OfficeK3",
             transport="websockets",
         )
-
         print("Read was succesfull. Going to sleep for the next 270 seconds.")
         sensor.workstate = SDS011.WorkStates.Sleeping
         time.sleep(270)
-
 except KeyboardInterrupt:
     sensor.reset()
     sensor = None
     sys.exit("\nSensor reset due to a KeyboardInterrupt\n")
-#
 # except:
 #     sensor.reset()
 #     sensor = None

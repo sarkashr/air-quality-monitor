@@ -1,11 +1,11 @@
 # air-quality-monitor
 
+TODO: shift to just one library
 --------------------------------------------------------------------------------
 
 Activating SSH on Raspberry Pi:
 
 Create an empty file named "ssh" and put in the root folder of "boot" partition in the microSD, and NOT in the "rootfs" partition.
-
 --------------------------------------------------------------------------------
 
 Setting up the Raspberry Pi for running the python code:
@@ -33,8 +33,10 @@ then add the following lines to the end of crontab file:
 ```
 @reboot python3 /home/pi/air-quality-monitor/code/aqm.py &
 ```
-Note: Modify the MQTT topic and client_id in aqm.cfg file accordingly.
+Note: Modify the MQTT topic and client_id in aqm.cfg file accordingly. Following is an example:
 
+topic = aqm/dortmund/station09
+client_id = Dortmund_Station09
 --------------------------------------------------------------------------------
 
 for setting up a remoteiot.com new device:
@@ -47,7 +49,6 @@ After filling the fields, copy the command line code and execute it with `sudo` 
 Most likely there's already an open SSH session to the RPi for pasting and executing the above copied command.
 
 Note: Java 11, 10 & 9 don't work on Pi Zero because of ARMv6 architecture.
-
 --------------------------------------------------------------------------------
 
 For activating SIM7600 module:
@@ -60,13 +61,17 @@ Then adding the following lines in the crontab just before the main script line:
 @reboot python3 /home/pi/air-quality-monitor/code/sim7600_connect.py
 @reboot python3 /home/pi/air-quality-monitor/code/sim7600_connect.py
 ```
-Note: Modify the APN in the aqm.cfg accordingly. For an APN with username and password please let me know so that I can create the config file because it's somewhat tricky.
 
+Note: Modify the APN in the aqm.cfg accordingly. The format can be any one of the followings:
+
+apn = "apn=YOUR_APN,ip-type=4"
+apn = "apn='YOUR_APN',ip-type=4"
+apn = "apn=YOUR_APN,username=YOUR_USERNAME,password=YOUR_PASSWORD,ip-type=4"
+apn = "apn='YOUR_APN',username='YOUR_USERNAME',password='YOUR_PASSWORD',ip-type=4"
 --------------------------------------------------------------------------------
 
 ### Headless Setup
 ![Headless Setup](images/setup_headless.jpg)
-
 --------------------------------------------------------------------------------
 
 ### Setup with Display, Keyboard and Ethernet connected

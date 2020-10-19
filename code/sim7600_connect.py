@@ -2,9 +2,9 @@ import os
 import time
 import configparser
 
-
+basedir = os.path.abspath(os.path.dirname(__file__))
 config = configparser.ConfigParser()
-config.read(os.path.dirname(os.path.realpath(__file__))+'/aqm.cfg')
+config.read(os.path.join(basedir, 'aqm.cfg'))
 
 
 def bring_sim7600_up():
@@ -31,7 +31,7 @@ def set_raw_ip_mode():
     os.system(com2)
 
 def connect_qmi():
-    com_connect = 'sudo qmicli -p -d /dev/cdc-wdm0 --device-open-net="net-raw-ip|net-no-qos-header" --wds-start-network="apn='+config['SIM7600']['apn']+',ip-type=4" --client-no-release-cid'
+    com_connect = 'sudo qmicli -p -d /dev/cdc-wdm0 --device-open-net="net-raw-ip|net-no-qos-header" --wds-start-network='+config['SIM7600']['apn']+' --client-no-release-cid'
     com_dhcp = 'sudo udhcpc -i wwan0'
     os.system(com_connect)
     os.system(com_dhcp)
